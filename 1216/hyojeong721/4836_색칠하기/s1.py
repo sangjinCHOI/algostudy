@@ -6,6 +6,7 @@ for tc in range(1, T+1):
     n = int(input())
     box = [[0] * 10 for _ in range(10)]
     color_box = [list(map(int, input().split())) for _ in range(n)]
+    print(color_box)
     res = 0
     for i in range(n):
         start_x = color_box[i][0]
