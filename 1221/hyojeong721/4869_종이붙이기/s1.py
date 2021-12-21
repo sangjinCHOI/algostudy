@@ -14,3 +14,4 @@ for tc in range(1, T+1):
     n = int(input())
     res = sequence(n//10)
     print('#{} {}'.format(tc, res))
+

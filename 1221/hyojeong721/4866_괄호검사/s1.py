@@ -5,7 +5,7 @@ def check(arr):
     stack = []
     sign_open = ['(', '{']
     sign_close = [')', '}']
-
+    print(arr)
     for c in arr:
         if c in sign_open:
             stack.append(c)
