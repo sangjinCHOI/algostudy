@@ -14,11 +14,11 @@ def hwaduck(n, pizza):
 
         temp = q.pop(0)
         idx = temp[0]
-        cheeze = temp[1] // 2
+        cheese = temp[1] // 2
         piz_num = temp[2]
-        temp = [idx, cheeze, piz_num]
+        temp = [idx, cheese, piz_num]
 
-        if cheeze > 0:
+        if cheese > 0:
             q.append(temp)
         else:
             if new_piz_num < len(pizza):

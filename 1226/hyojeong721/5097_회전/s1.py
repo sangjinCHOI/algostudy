@@ -8,6 +8,6 @@ for tc in range(1, T+1):
     ans_idx = 0
 
     for i in range(m):
-        ans_idx = (ans_idx+1)%n
+        ans_idx = (ans_idx+1) % n
 
     print("#{}".format(tc), arr[ans_idx])

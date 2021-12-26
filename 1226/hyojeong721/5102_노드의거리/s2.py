@@ -10,12 +10,12 @@ def bfs(graph, s, g):
     while q:
         s = q.pop(0)
         if s == g:
-            return visited[s] -1
+            return visited[s] - 1
 
         if graph[s]:
             for i in graph[s]:
                 if visited[i] <= 0:
-                    visited[i] = visited[s]+1
+                    visited[i] = visited[s] + 1
                     q.append(i)
     return 0
 
