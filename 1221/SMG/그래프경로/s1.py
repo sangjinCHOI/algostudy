@@ -6,7 +6,6 @@ T = int(input())
 def dfs(v):
     global visited, mat, stack
     stack = [v]
-
     while stack:
         v = stack.pop()
         if visited[v] == 0:
