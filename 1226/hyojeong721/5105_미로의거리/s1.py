@@ -21,7 +21,6 @@ def search(miro, start_row, start_col):
             next_row = now_row + drow[i]
             next_col = now_col + dcol[i]
 
-
             # 미로 안에 있냐?
             if 0 <= next_row < n and 0 <= next_col < n:
                 # 길인가?
@@ -46,6 +45,4 @@ for tc in range(1, T+1):
             start_col = miro[i].index(2)
 
     res = search(miro, start_row, start_col)
-
-
     print("#{} {}".format(tc, res))
