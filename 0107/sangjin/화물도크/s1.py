@@ -7,6 +7,7 @@ for test_case in range(1, int(input())+1):
     works = sorted(works, key=lambda x: x[1])
     # print(works)
 
+
     result = 0
     now = 0
     for i in range(N):
