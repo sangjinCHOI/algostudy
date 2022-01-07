@@ -19,15 +19,18 @@ def sorting(L1, L2):
     if L1[-1] > L2[-1]:
         cnt += 1
 
-    while L1 and L2:
-        if L1[0] <= L2[0]:
-            result.append(L1.pop(0))
+    i, j = 0, 0
+    while i < len(L1) and j < len(L2):
+        if L1[i] <= L2[j]:
+            result.append(L1[i])
+            i += 1
         else:
-            result.append(L2.pop(0))
-    if L1:
-        result.extend(L1)
-    elif L2:
-        result.extend(L2)
+            result.append(L2[j])
+            j += 1
+    if i < len(L1):
+        result += L1[i:]
+    elif j < len(L2):
+        result += L2[j:]
     return result
 
 
