@@ -6,7 +6,7 @@ T = int(input())
 def quickSort(arr):
     if len(arr) <= 1:
         return arr
-    p = arr[len(arr) // 2]
+    p = arr[-1]
     L = []
     E = []
     R = []

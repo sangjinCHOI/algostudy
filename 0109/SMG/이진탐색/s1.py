@@ -28,6 +28,7 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     arr = list(map(int, input().split()))
     nums = list(map(int, input().split()))
+    arr.sort()
     cnt = 0
     for i in nums:
         binarySearch(arr, i)
