@@ -5,6 +5,7 @@ def solution(new_id):
         if 65 <= ord(letter) <= 90:
             letter = chr(ord(letter) + 32)
         step1 += letter
+
     # 2
     step2 = ''
     for letter in step1:
