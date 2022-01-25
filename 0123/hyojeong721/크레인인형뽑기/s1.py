@@ -1,4 +1,3 @@
-# 런타임에러 1개
 def solution(board, moves):
     answer = 0
     basket = []
@@ -10,7 +9,8 @@ def solution(board, moves):
                 basket.append(board[i][pos])
                 board[i][pos] = 0
                 break
-    # print('basket', basket)
+    print('basket', basket)
+
     # 중복인형 터뜨리기
     i = 0
     while i < len(basket):
@@ -20,6 +20,8 @@ def solution(board, moves):
             i -= 1
         else:
             i += 1
+    print(basket)
+
     return answer
 
 
