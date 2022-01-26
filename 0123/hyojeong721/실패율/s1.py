@@ -13,7 +13,7 @@ def solution(N, stages):
         participant = participant - inguser
     print(temp)
     sortedtemp = sorted(temp.items(), key=lambda x: x[1], reverse=True)
-
+    print(sortedtemp)
     for item in sortedtemp:
         answer.append(item[0])
     return answer

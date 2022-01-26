@@ -28,4 +28,4 @@ def solution(dartResult):
     answer = sum(score_lst)
     return answer
 
-print(solution('1S*2T*3S'))
+print(solution('10S*2T*3S'))
