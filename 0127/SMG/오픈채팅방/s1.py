@@ -5,6 +5,7 @@ def solution(record):
         if 'Leave' not in i:
             a, b, c = i.split()
             users[b] = c
+    print(users)
     for i in record:
         if "Leave" in i:
             a, b = i.split()

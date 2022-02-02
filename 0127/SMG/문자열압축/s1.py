@@ -14,3 +14,5 @@ def solution(s):
                 cnt = 1
         answer.append(len(temp))
     return min(answer)
+
+print(solution('d'))
