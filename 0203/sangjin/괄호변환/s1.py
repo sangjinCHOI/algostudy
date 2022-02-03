@@ -21,9 +21,10 @@ def rev(arr):
 
 
 answer = ''
+
+
 def solution(p):
     global answer
-    stack = []
     u, v = "", ""
 
     if not p:
