@@ -4,7 +4,6 @@ def DFS(n, computers, i, visited):
         if computers[i][j] == 1 and visited[j] == 0:
             DFS(n, computers, j, visited)
 
-
 def solution(n, computers):
     answer = 0
     visited = [0] * n
