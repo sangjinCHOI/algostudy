@@ -1,33 +1,31 @@
-def transform(curr, target, words, tmp_count):
-    global count
-    N = len(words)
-    M = len(words[0])
-    for i in range(N):
-        x = 0
-        for j in range(M):
-            if curr[j] != words[i][j]:
-                x += 1
+def transform(begin, target, words, visited):
+    count = 0
+    stack = [(begin, count)]
 
-        if x == 1:
-            if visited[i] == 0:
+    while stack:
+        curr, cnt = stack.pop()
+        if curr == target:
+            return cnt
+
+        for i in range(len(words)):
+            if visited[i]:
+                continue
+            tmp = 0
+            for j in range(len(words[0])):
+                if curr[j] != words[i][j]:
+                    tmp += 1
+            if tmp == 1:
                 visited[i] = 1
-                transform(words[i], target, words, tmp_count + 1)
-            else:
-                if count > tmp_count:
-                    count = tmp_count
-                    return
-    if tmp_count > count:
-        return
-
-
-count = 999999999999999999999
-visited = [0] * 6
+                stack.append((words[i], cnt + 1))
 
 
 def solution(begin, target, words):
-    N = len(words)
-    M = len(words[0])
+    answer = 0
+    if target not in words:
+        return answer
 
-    transform(begin, target, words, 0)
-    answer = count
+    N = len(words)
+    visited = [0] * N
+
+    answer = transform(begin, target, words, visited)
     return answer
