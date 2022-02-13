@@ -40,4 +40,4 @@ def solution(p):
 
     return answer
 
-solution()
+print(solution("()))((()"))

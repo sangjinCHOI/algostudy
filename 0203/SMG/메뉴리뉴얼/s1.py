@@ -8,25 +8,25 @@ def solution(orders, course):
         result = 1
         temp = set()
         for order in range(N):
-            for i in list(combinations(orders[order], num)):
-                i = list(i)
-                i.sort()
-                i = "".join(i)
+            for comb in list(combinations(orders[order], num)):
+                comb = list(comb)
+                comb.sort()
+                comb = "".join(comb)
                 cnt = 0
-                for j in range(N):
-                    if order != j:
+                for order2 in range(N):
+                    if order != order2:
                         check = True
-                        for menu in i:
-                            if menu not in orders[j]:
+                        for menu in comb:
+                            if menu not in orders[order2]:
                                 check = False
                         if check:
                             cnt += 1
                 if result < cnt:
                     result = cnt
                     temp = set()
-                    temp.add(i)
+                    temp.add(comb)
                 elif result == cnt:
-                    temp.add(i)
+                    temp.add(comb)
         answer.append(temp)
 
     for i in answer:
