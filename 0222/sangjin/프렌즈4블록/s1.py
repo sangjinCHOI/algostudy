@@ -7,7 +7,6 @@ def down(board):
                 status += 1
     return status, board
 
-
 def solution(m, n, board):
     cnt = 0
     tmp = 1
