@@ -6,6 +6,7 @@ def solution(n, info):
     answer = []
     score = 0
     num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     for i in range(11):
         for p in permutations(num, i):
             ryan_score = 0
@@ -14,10 +15,11 @@ def solution(n, info):
                 arrow += info[i] + 1
                 if arrow > n:
                     break
-                ryan_score += (info[i] + 1) * (10 - int(i))
+                ryan_score += (ryan[i]) * (10 - int(i))
             if ryan_score >= score:
                 answer.append(p)
     print(answer)
+
     #     arrow = 0
     #     for i in range(len(info)):
     #         for j in range(i, len(info))
