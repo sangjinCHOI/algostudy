@@ -1,5 +1,6 @@
 def solution(phone_book):  ## 효율성 3,4 걸림
     phone_book = sorted(phone_book, key=lambda x: len(x))  # 문자길이순 정렬
+    print(phone_book)
     answer = True
     for i, phone1 in enumerate(phone_book):
         hash_map = {}
@@ -23,11 +24,11 @@ def solution(phone_book): # 효율성 3, 4 걸림
 
 phone_book = ["12","567", "123","1235","88"]
 print(solution(phone_book))
-
-
-pb1 = ["119", "97674223", "1195524421"]
-print(solution(pb1))
-pb2 = ["123","456","789"]
-print(solution(pb2))
-pb3 = ["12","123","1235","567","88"]
-print(solution(pb3))
+#
+#
+# pb1 = ["119", "97674223", "1195524421"]
+# print(solution(pb1))
+# pb2 = ["123","456","789"]
+# print(solution(pb2))
+# pb3 = ["12","123","1235","567","88"]
+# print(solution(pb3))
