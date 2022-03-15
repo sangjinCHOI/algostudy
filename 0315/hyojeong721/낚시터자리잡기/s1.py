@@ -1,5 +1,6 @@
 import sys
 sys.stdin = open('sample_input.txt', 'r')
+
 import itertools
 
 def sit(ent, person, position):
@@ -13,6 +14,7 @@ def sit(ent, person, position):
                 position[ent + i] = cnt
                 res += cnt
                 break
+
             elif 0 <= ent-i < len(position) and position[ent-i] == 0:
                 position[ent - i] = cnt
                 res += cnt
@@ -23,7 +25,6 @@ def sit(ent, person, position):
 
     return res
 
-
 T = int(input())
 for test_case in range(1, T+1):
     N = int(input())
@@ -31,6 +32,7 @@ for test_case in range(1, T+1):
     gates = []
     for i in range(3):
         gates.append(list(map(int, input().split())))
+
     answer = 9999999999999999
     for j in itertools.permutations([0,1,2], 3):
         position = ['x'] + [0 for i in range(N)]
