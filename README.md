@@ -7,5 +7,5 @@
 | 21.12.14 - 22.01.02 |   SWEA Programming Intermediate   |
 | 22.01.04 - 22.01.14 |     SWEA Programming Advanced     |
 | 22.01.18 - 22.03.04 |   Programmers 카카오 Level 1, 2   |
-|     22.03.08 -      | Programmers 코딩테스트 고득점 Kit |
+| 22.03.08 - 22.04.19 | Programmers 코딩테스트 고득점 Kit |
 
